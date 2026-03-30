@@ -19,7 +19,7 @@ app.post('/download', (req, res) => {
     return res.status(400).json({ error: 'URL manquante' });
   }
 
-  const cmd = `yt-dlp -f "best[ext=mp4]/best" --get-url "${url}"`;
+  const cmd = `yt-dlp -f "best[ext=mp4]/best" --cookies /app/cookies.txt --get-url "${url}"`;
 
   exec(cmd, (error, stdout, stderr) => {
     if (error) {
