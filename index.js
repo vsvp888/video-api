@@ -27,7 +27,7 @@ app.post('/download', (req, res) => {
     }
 
     const videoUrl = stdout.trim();
-    res.json({ videoUrl });
+    res.redirect(videoUrl);
   });
 });
 
