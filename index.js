@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const API_KEY = 'mon-cle-secrete-2024';
+const API_KEY = 'vsvp26';
 
 app.post('/download', (req, res) => {
   const { url, key } = req.body;
